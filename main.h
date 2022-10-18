@@ -13,7 +13,9 @@ typedef struct formated_input
 	int (*func_ptr)(va_list);
 } format_input;
 
-
+int op_char(va_list argz);
+int op_string(va_list argz);
+int op_percent(__attribute__((unused))va_list argz);
 
 
 #endif
