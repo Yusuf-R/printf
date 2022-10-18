@@ -12,7 +12,8 @@ typedef struct formated_input
 	char *input;
 	int (*func_ptr)(va_list);
 } format_input;
-
+int op_integer(argz);
+int d_i_print(argz);
 
 
 
