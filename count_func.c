@@ -55,6 +55,6 @@ int count_funct(*format, va_list argz, formated_input specifiers)
 					return (-1);
 			}
 		}
-		return (char_count);
 	}
+	return (char_count);
 }
