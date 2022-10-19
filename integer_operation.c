@@ -23,37 +23,32 @@ int op_integer(va_list argz)
 
 int d_i_print(va_list argz)
 {
-	int digit, count, place_holder, whole;
-	unsigned int temp;
+	int n;
+	int div;
+	int len;
+	unsigned int num;
 
-	place_holder = 1;
-	whole = count = temp = digit = 0;
-	digit = va_arg(argz, int);
+	n  = va_arg(argz, int);
+	div = 1;
+	len = 0;
 
-	if (digit <= INT_MAX && digit >= INT_MIN)
+	if (n < 0)
 	{
-		if (digit < 0)
-		{
-			digit  = digit * -1;
-			_putchar('-');
-			count++;
-		}
-		temp = digit;
-		for (; (temp / place_holder) > 9; )
-		{
-			place_holder = place_holder * 10;
-		}
-		for (; place_holder != 0; )
-		{
-			whole = digit / place_holder
-			_putchar(48 +  whole);
-			count++;
-			digit = digit % place_holder;
-			place_holder = place_holder / 10;
-		}
+		len += _putchar('-');
+		num = n * -1;
 	}
 	else
-		return (-1);
+		num = n;
 
-	return (count);
+	for (; num / div > 9; )
+		div *= 10;
+
+	for (; div != 0; )
+	{
+		len += _putchar('0' + num / div);
+		num %= div;
+		div /= 10;
+	}
+
+	return (len);
 }
