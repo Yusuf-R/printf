@@ -10,8 +10,8 @@ int op_char(va_list argz)
 {
 	char i;
 
-	i = va_arg(list, int);
-	_putchar([i]);
+	i = va_arg(argz, int);
+	_putchar(i);
 	return (1);
 }
 
@@ -26,7 +26,7 @@ int op_string(va_list argz)
 	int i;
 	char *str;
 
-	str = va_arg(list, char *);
+	str = va_arg(argz, char *);
 	if (str == 0)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)

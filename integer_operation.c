@@ -8,11 +8,11 @@
  * Return: the end result of digit count
  */
 
-int op_integer(argz)
+int op_integer(va_list argz)
 {
 	int digit_count;
 
-	digit_count = int d_i_print(argz);
+	digit_count = d_i_print(argz);
 	return (digit_count);
 }
 /**
@@ -21,7 +21,7 @@ int op_integer(argz)
  * Return: count
  */
 
-int d_i_print(argz)
+int d_i_print(va_list argz)
 {
 	int digit, count, temp;
 	int place_holder, whole;
@@ -40,7 +40,7 @@ int d_i_print(argz)
 	temp = digit;
 	while (temp > 9)
 	{
-		place_holder = div * 10;
+		place_holder = place_holder * 10;
 		temp = temp / place_holder;
 	}
 	while (place_holder > 0)
@@ -49,7 +49,7 @@ int d_i_print(argz)
 		_putchar(whole + 48);
 		count++;
 		digit = digit % place_holder;
-		placeholder = placeholder / 10;
+		place_holder = place_holder / 10;
 	}
 	return (count);
 }
