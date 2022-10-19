@@ -27,7 +27,7 @@ int op_string(va_list argz)
 	char *str;
 
 	str = va_arg(argz, char *);
-	if (str == 0)
+	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
