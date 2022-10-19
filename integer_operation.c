@@ -32,11 +32,17 @@ int d_i_print(va_list argz)
 
 	if (digit < 0)
 	{
+		_putchar('-');
+		count++;
+		digit = -digit;
+	}
+
+	if (digit == 0)
+	{
 		_putchar(48);
 		count++;
 		return (count);
 	}
-
 	temp = digit;
 	while (temp > 9)
 	{
