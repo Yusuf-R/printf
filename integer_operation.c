@@ -39,14 +39,15 @@ int d_i_print(va_list argz)
 	}
 	else
 		temp = digit;
-	while ((temp / place_holder) > 9)
+	for (; (temp / place_holder) > 9; )
 	{
 		place_holder = place_holder * 10;
 	}
 	for (; place_holder != 0; )
 	{
 		whole = digit / place_holder;
-		count += _putchar(whole + 48);
+		 _putchar(whole + 48);
+		count++;
 		digit = digit % place_holder;
 		place_holder = place_holder / 10;
 	}
