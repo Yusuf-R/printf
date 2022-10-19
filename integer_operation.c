@@ -37,14 +37,8 @@ int d_i_print(va_list argz)
 		count++;
 		digit = -digit;
 	}
-
-	if (digit == 0)
-	{
-		_putchar(48);
-		count++;
-		return (count);
-	}
-	temp = digit;
+	else
+		temp = digit;
 	while (temp > 9)
 	{
 		place_holder = place_holder * 10;
