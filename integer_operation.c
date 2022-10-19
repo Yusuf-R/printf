@@ -25,16 +25,15 @@ int d_i_print(va_list argz)
 {
 	int digit, count;
 	unsigned int temp;
-	int place_holder, whole;
+	int place_holder;
 
 	place_holder = 1;
-	whole = count = temp = digit = 0;
+	count = temp = digit = 0;
 	digit = va_arg(argz, int);
 
 	if (digit < 0)
 	{
-		_putchar('-');
-		count++;
+		count += _putchar('-');
 		temp  = digit * -1;
 	}
 	else
@@ -45,9 +44,7 @@ int d_i_print(va_list argz)
 	}
 	for (; place_holder != 0; )
 	{
-		whole = digit / place_holder;
-		 _putchar(whole + 48);
-		count++;
+		count += _putchar(48 +  digit / place_holder);
 		digit = digit % place_holder;
 		place_holder = place_holder / 10;
 	}
