@@ -18,21 +18,22 @@ int op_integer(va_list argz)
 
 
 /**
- * op_unsgined - Prints  unsigned number
+ * op_unsigned - Prints  unsigned number
  * @argz: list argument
  * Return: The amount of numbers printed
  */
 
 int op_unsigned (va_list argz)
 {
-	unsigned int digit_count
+	unsigned int digit_count;
+
 	digit_count = va_arg(argz, unsigned int);
-	
+
 	if (digit_count == 0)
 		return (u_print(digit_count));
 	if (digit_count < 1)
 		return (-1);
-	return (u_print(digti_count));
+	return (u_print(digit_count));
 }
 
 /**
@@ -90,14 +91,19 @@ int d_i_print(va_list argz)
 int u_print(unsigned int u_digit)
 {
 	int whole, place_holder, count;
-	unsigned int temp;
+
+	unsigned int temp, tmp2;
 
 	place_holder = 1;
 	whole = count = 0;
-	temp = u_digit	
+	temp = u_digit;
+	tmp2 = temp;
 
-	while (temp / place_holder > 9)
+	while (tmp2 > 9)
+	{
 		place_holder = place_holder * 10;
+		tmp2 = tmp2 / place_holder;
+	}
 
 	while (place_holder != 0)
 	{
