@@ -23,7 +23,7 @@ int op_percent(__attribute__((unused))va_list argz);
 int _putchar(char c);
 int op_integer(va_list argz);
 int d_i_print(va_list argz);
-int count_funct(const char *format, va_list argz, format_input sp[]);
+int count_func(const char *format, va_list argz, format_input sp[]);
 
 
 

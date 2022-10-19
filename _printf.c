@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	str_count = 0;
 	va_start(argz, format);
-	str_count = count_funct(format, argz, sp);
+	str_count = count_func(format, argz, sp);
 	va_end(argz);
 	return (str_count);
 }
