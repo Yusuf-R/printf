@@ -23,8 +23,9 @@ int op_integer(va_list argz)
 
 int d_i_print(va_list argz)
 {
-	unsigned  int digit, count, temp;
-	unsigned  int place_holder, whole;
+	int digit, count;
+	unsigned int temp;
+	int place_holder, whole;
 
 	place_holder = 1;
 	whole = count = temp = digit = 0;
