@@ -63,10 +63,9 @@ int d_i_print(va_list argz)
 		tmp1 = temp;
 	}
 
-	while (tmp1 > 9)
+	while ((tmp1 / place_holder) > 9)
 	{
 		place_holder = place_holder * 10;
-		tmp1 = tmp1 / place_holder;
 	}
 
 	while (place_holder != 0)
@@ -99,10 +98,9 @@ int u_print(unsigned int u_digit)
 	temp = u_digit;
 	tmp2 = temp;
 
-	while (tmp2 > 9)
+	while (tmp2 / place_holder > 9)
 	{
 		place_holder = place_holder * 10;
-		tmp2 = tmp2 / place_holder;
 	}
 
 	while (place_holder != 0)
