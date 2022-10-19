@@ -43,11 +43,10 @@ int d_i_print(va_list argz)
 	{
 		place_holder = place_holder * 10;
 	}
-	while (place_holder != 0)
+	for (; place_holder != 0; )
 	{
 		whole = digit / place_holder;
-		_putchar(whole + 48);
-		count++;
+		count += _putchar(whole + 48);
 		digit = digit % place_holder;
 		place_holder = place_holder / 10;
 	}
