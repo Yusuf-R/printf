@@ -50,7 +50,7 @@ int count_func(const char *format, va_list argz, format_input sp[])
 			}
 			i = i + 1;
 		}
-		
+
 		else
 		{
 			_putchar(format[i]);

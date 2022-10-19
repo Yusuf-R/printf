@@ -8,10 +8,7 @@
 
 int op_char(va_list argz)
 {
-	char i;
-
-	i = va_arg(argz, int);
-	_putchar(i);
+	_putchar(va_arg(argz, int));
 	return (1);
 }
 
