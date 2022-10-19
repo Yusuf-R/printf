@@ -15,6 +15,26 @@ int op_integer(va_list argz)
 	digit_count = d_i_print(argz);
 	return (digit_count);
 }
+
+
+/**
+ * op_unsgined - Prints  unsigned number
+ * @argz: list argument
+ * Return: The amount of numbers printed
+ */
+
+int op_unsigned (va_list argz)
+{
+	unsigned int digit_count
+	digit_count = va_arg(argz, unsigned int);
+	
+	if (digit_count == 0)
+		return (u_print(digit_count));
+	if (digit_count < 1)
+		return (-1);
+	return (u_print(digti_count));
+}
+
 /**
  * d_i_print - function to print intergers
  * @argz: the argument that is being passed to the argument
@@ -24,7 +44,7 @@ int op_integer(va_list argz)
 int d_i_print(va_list argz)
 {
 	int digit, whole, place_holder, count;
-	unsigned int temp;
+	unsigned int temp, tmp1;
 
 	digit  = va_arg(argz, int);
 	place_holder = 1;
@@ -34,9 +54,47 @@ int d_i_print(va_list argz)
 	{
 		count += _putchar('-');
 		temp = digit * -1;
+		tmp1 = temp;
 	}
 	else
+	{
 		temp = digit;
+		tmp1 = temp;
+	}
+
+	while (tmp1 > 9)
+	{
+		place_holder = place_holder * 10;
+		tmp1 = tmp1 / place_holder;
+	}
+
+	while (place_holder != 0)
+	{
+		whole = temp / place_holder;
+		_putchar('0' + whole);
+		count++;
+		temp =  temp % place_holder;
+		place_holder = place_holder / 10;
+	}
+
+	return (count);
+}
+
+
+ /**
+ * u_print - function to print intergers
+ * @argz: the argument that is being passed to the argument
+ * Return: count
+ */
+
+int u_print(unsigned int u_digit)
+{
+	int whole, place_holder, count;
+	unsigned int temp;
+
+	place_holder = 1;
+	whole = count = 0;
+	temp = u_digit	
 
 	while (temp / place_holder > 9)
 		place_holder = place_holder * 10;
