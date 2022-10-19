@@ -82,9 +82,9 @@ int d_i_print(va_list argz)
 }
 
 
- /**
+/**
  * u_print - function to print intergers
- * @argz: the argument that is being passed to the argument
+ * @u_digit: the unsigned nunmber
  * Return: count
  */
 

@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 	{"d", op_integer},
 	{"i", op_integer},
 	{"%", op_percent},
+	{"u", op_unsigned},
 	{NULL, NULL}
 	};
 	if (format == NULL)
