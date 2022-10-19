@@ -35,7 +35,7 @@ int d_i_print(va_list argz)
 	{
 		_putchar('-');
 		count++;
-		digit = -digit;
+		temp  = digit * -1;
 	}
 	else
 		temp = digit;
