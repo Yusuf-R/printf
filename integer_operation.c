@@ -23,9 +23,7 @@ int op_integer(va_list argz)
 
 int d_i_print(va_list argz)
 {
-	int digit, whole;
-	int place_holder;
-	int count;
+	int digit, whole, place_holder, count;
 	unsigned int temp;
 
 	digit  = va_arg(argz, int);
@@ -40,10 +38,10 @@ int d_i_print(va_list argz)
 	else
 		temp = digit;
 
-	for (; temp / place_holder > 9; )
+	while (temp / place_holder > 9)
 		place_holder = place_holder * 10;
 
-	for (; place_holder != 0; )
+	while (place_holder != 0)
 	{
 		whole = temp / place_holder;
 		_putchar('0' + whole);
