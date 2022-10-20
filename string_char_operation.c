@@ -68,7 +68,7 @@ int op_print_str_rev(va_list argz)
 }
 
 /**
- * rot13 - Converts string to rot13
+ * op_rot13 - Converts string to rot13
  * @argz: string to convert
  * Return: converted string
  */

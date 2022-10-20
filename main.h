@@ -31,7 +31,7 @@ int op_hex(va_list argz);
 int op_heX(va_list argz);
 int op_print_str_rev(va_list argz);
 int op_rot13(va_list argz);
-
+int op_strUcase(va_list argz);
 
 
 int d_i_print(va_list argz);

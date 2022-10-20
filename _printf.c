@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 	{"X", op_heX},
 	{"r", op_print_str_rev},
 	{"R", op_rot13},
+	{"S", op_strUcase},
 	{NULL, NULL}
 	};
 	if (format == NULL)
