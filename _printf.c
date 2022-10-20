@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 	{"o", op_octal},
 	{"x", op_hex},
 	{"X", op_heX},
+	{"r", op_print_str_rev},
+	{"R", op_rot13},
 	{NULL, NULL}
 	};
 	if (format == NULL)

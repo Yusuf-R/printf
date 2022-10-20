@@ -29,6 +29,10 @@ int op_unsigned(va_list argz);
 int op_octal(va_list argz);
 int op_hex(va_list argz);
 int op_heX(va_list argz);
+int op_print_str_rev(va_list argz);
+int op_rot13(va_list argz);
+
+
 
 int d_i_print(va_list argz);
 int count_func(const char *format, va_list argz, format_input sp[]);
