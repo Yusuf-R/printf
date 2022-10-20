@@ -8,12 +8,14 @@
  */
 
 
-unsigned int len_base(unsigned int x_num, unsigned int base)
+unsigned int len_base(unsigned int x_num, int base)
 {
 	unsigned int i;
 
 	for (i = 0; x_num > 0; i++)
+	{
 		x_num = x_num / base;
+	}
 	return (i);
 
 }

@@ -27,13 +27,13 @@ int d_i_print(va_list argz);
 int count_func(const char *format, va_list argz, format_input sp[]);
 int op_unsigned (va_list argz);
 int u_print(unsigned int u_digit);
-unsigned int len_base(unsigned int, unsigned int);
+unsigned int len_base(unsigned int, int);
 
 
 
 
 
-unsigned int str_len(char *s);
+int str_len(char *s);
 char *_memcpy(char *dest, char *src, unsigned int s_len);
 char *str_rev(char *s);
 void _putchar_base(char *str);

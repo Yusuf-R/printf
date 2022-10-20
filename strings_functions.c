@@ -8,9 +8,9 @@
  * Return: the length of the string.
  */
 
-unsigned int str_len(char *s)
+int str_len(char *s)
 {
-	unsigned int len;
+	int len;
 
 	while (s[len])
 	{
@@ -49,8 +49,7 @@ char *_memcpy(char *dest, char *src, unsigned int s_len)
 
 char *str_rev(char *s)
 {
-	unsigned int s_len;
-	unsigned int i;
+	int s_len, i;
 	char tmp_str, *s_rev;
 
 	s_len = str_len(s);
@@ -77,6 +76,6 @@ void _putchar_base(char *str)
 {
 	int i;
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 }
