@@ -21,8 +21,10 @@ int _printf(const char *format, ...)
 	{"d", op_integer},
 	{"i", op_integer},
 	{"%", op_percent},
-	{"b", op_binary},
 	{"u", op_unsigned},
+	{"o", op_octal},
+	{"x", op_hex},
+	{"X", op_heX},
 	{NULL, NULL}
 	};
 	if (format == NULL)

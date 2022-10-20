@@ -17,5 +17,25 @@ unsigned int len_base(unsigned int x_num, int base)
 		x_num = x_num / base;
 	}
 	return (i);
+}
 
+
+/**
+ * hex_index - to help return either x array or X array
+ * @num: num to base 16
+ * @x: to compare which of the array to use
+ * Return: Ascii value for a letter
+ */
+
+int hex_index(int num, char x)
+{
+	char *hex = "abcdef";
+	char *heX = "ABCDEF";
+
+	num = num - 10;
+	if (x == 'x')
+		return (hex[num]);
+	else
+		return (heX[num]);
+	return (0);
 }

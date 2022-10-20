@@ -16,19 +16,25 @@ typedef struct formated_input
 	int (*func_ptr)(va_list);
 } format_input;
 
+
+int _putchar(char c);
 int _printf(const char *format, ...);
+
 int op_char(va_list argz);
 int op_string(va_list argz);
 int op_binary(va_list argz);
 int op_percent(__attribute__((unused))va_list argz);
-int _putchar(char c);
 int op_integer(va_list argz);
+int op_unsigned(va_list argz);
+int op_octal(va_list argz);
+int op_hex(va_list argz);
+int op_heX(va_list argz);
+
 int d_i_print(va_list argz);
 int count_func(const char *format, va_list argz, format_input sp[]);
-int op_unsigned (va_list argz);
 int u_print(unsigned int u_digit);
 unsigned int len_base(unsigned int, int);
-
+int hex_index(int, char);
 
 
 
